@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<script>
+			var num=prompt("Enter the Number : ");
+			var digit=parseInt(num);
+
+			console.log("Last digit is : " + parseInt(digit%10));
+			var first;
+			while(digit!=0)
+			{
+				var rem=parseInt(digit%10);
+				first=rem;
+				digit=parseInt(digit/10);
+			}
+			console.log("First Digit is : "+ first);
+			
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

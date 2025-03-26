@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<script>
+			var a=[];
+			var num=prompt("Enter the Digit : ");
+			var digit=parseInt(num);
+
+			var i=0;
+			while(digit!=0)
+			{
+				var rem=digit%10;
+				digit=parseInt(digit/10);
+				a[i]=rem;	
+				i++;
+			}
+			for(i=0;i<a.length;i++)
+			{	
+				for(var j=i+1;j<a.length;j++)
+				{
+				if(a[i]>a[j])
+				{
+					var temp=a[i];
+					a[i]=a[j];
+					a[j]=temp;
+				}
+				}
+			}
+			var count=1;
+			for(i=0;i<a.length;i++)
+			{
+				if(i==a.length-1)
+				{
+					console.log(a[i]+"----->"+count);
+					break;	
+				}
+				else if(a[i]==a[i+1])
+				{
+					count++;
+				}
+				else
+				{
+					console.log(a[i]+"----->"+count);
+					count=1;
+				}
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

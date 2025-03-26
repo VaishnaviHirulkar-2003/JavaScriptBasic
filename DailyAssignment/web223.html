@@ -1,0 +1,119 @@
+<html>
+	<head>
+		<title>I am Web Page</title>
+
+		<script>
+			function show(id)
+			{
+				var getid=document.getElementById("result");
+				var f;
+				if(id=='add')
+				{
+					f=parseInt(document.getElementById("first").value)+parseInt(document.getElementById("second").value); 
+				}
+				else if(id=='mul')
+				{
+					f=parseInt(document.getElementById("first").value)*parseInt(document.getElementById("second").value); 
+				}
+				else if(id=='sub')
+				{
+					f=parseInt(document.getElementById("first").value)-parseInt(document.getElementById("second").value); 
+				}
+				else if(id=='div')
+				{
+					var sec=parseInt(document.getElementById("second").value);
+					if(sec!=0)
+					{											     							f=parseInt(document.getElementById("first").value)/parseInt(document.getElementById("second").value); 
+					}
+					else
+					{
+						f="infinity";
+					}
+				}
+				getid.value=f;
+				
+			}
+		</script>
+
+
+		<style>
+			*
+			{
+				margin:0px;
+				padding:0px;
+				background-color:yellow;
+			}
+			.container	
+			{
+				width:30%;
+				min-height:100px;
+				margin:auto;		
+				margin-top:5%;
+			}
+			.container input
+			{
+				width:100%;
+				height:40px;
+				border:2px solid red;
+				border-radius:10px;
+				background-color:lightblue;
+				font-size:17px;
+				font-weight:600;
+				text-align:center;
+			}	
+			#result
+			{
+				width:50%;
+				margin-left:25%;
+				margin-top:5%;
+				border-radius:0px;
+			}
+			h1
+			{
+				text-align:center;
+				margin-top:3%;
+			}
+			.but
+			{
+				width:60%;
+				margin:auto;
+				margin-top:3%;
+				display:flex;
+				flex-direction:row;
+				gap:15%;
+			}
+			.but button
+			{
+				width:14%;
+				height:40px;
+				background-color:red;
+				color:white;
+				font-weight:600;
+				font-size:15px;
+				border-radius:10px;
+				border:none;
+				cursor:pointer;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>Calculator</h1>
+		<div class="container">
+		<input type='text' value='' id="first"></input>
+		<br>
+		<br>
+		<input type='text' value='' id="second"></input>
+		<br>
+		<br>
+		<input type='text' value='' id="result"></input>
+		</div>
+
+		<div class="but">
+			<button type='button' onclick='show(id)' id="add">Addition</button>
+			<button type='button' onclick='show(id)' id="mul">Multiplication</button>
+			<button type='button' onclick='show(id)' id="sub">Subtraction</button>
+			<button type='button' onclick='show(id)' id="div">Division</button>
+		</div>
+	</body>
+</html>

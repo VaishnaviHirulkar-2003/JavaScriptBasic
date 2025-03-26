@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<script>
+
+			var num=prompt("Enter the Number : ");
+			num=parseInt(num);
+			var first=0;
+			var last=num%10;
+			var copy1=num;
+			var count=0;
+			var copy=num;
+			while(copy1!=0)
+			{
+				var rem=copy1%10;
+				first=rem;
+				copy1=parseInt(copy1/10);
+				count++;
+			}
+			var middle=0;
+			while(copy>=10)
+			{
+				var rem=copy%10;
+				middle=rem+middle*10;
+				copy=parseInt(copy/10);
+			} 
+			var rev=0;
+			var countm=0;
+			while(middle>=10)
+			{
+				var rem=middle%10;
+				rev=rev*10+rem;
+				middle=parseInt(middle/10);
+				countm++;
+			}
+			var decimal=1;
+			for(var i=1;i<=count-1;i++)
+			{
+				decimal=decimal*10;
+			}
+			var digit=(last*decimal)+Math.pow(10,count-countm-1)*rev+first;
+						document.write(digit);
+			
+				
+		</script>
+`
+	</head>
+
+	<body>
+
+	</body>
+</html>

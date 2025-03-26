@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<script>	
+			var num=prompt("Enter the Number");
+			var digit=parseInt(num);
+			var copy=digit;
+
+			var rev=0;
+			while(digit!=0)
+			{
+				var rem=digit%10;
+				rev=rev*10+rem;
+				digit=parseInt(digit/10);
+			}
+			if(rev==copy)
+			{	
+				console.log("Palimdrome");
+			}
+			else
+			{
+				console.log("Not A Palimdrome");
+			}
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

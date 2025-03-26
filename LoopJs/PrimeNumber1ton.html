@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<script>
+		var range=prompt("Enter the Range : ");
+		range=parseInt(range);
+
+		for(var i=1;i<=range;i++)
+		{
+			var flag='true';
+			for(var j=2;j<i;j++)
+			{
+				if(i%j==0)
+				{	
+					flag='false';
+					break;
+				}
+			}
+			if(flag=='true')
+			{
+				console.log(i);
+			}
+		}
+		</script>
+	</head>
+
+	</body>
+
+	</body>
+</html>

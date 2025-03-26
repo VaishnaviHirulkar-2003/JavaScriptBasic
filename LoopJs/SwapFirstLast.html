@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<script>
+			var num=prompt("Enter the Digit : ");
+			var digit=parseInt(num);
+
+			var last=digit%10;
+
+			let first;
+			while(digit!=0)
+			{
+				var rem=digit%10;
+				digit=parseInt(digit/10);
+				first=rem;
+			}
+			var temp=first;
+			first=last;
+			last=temp;
+
+			console.log("After Swapping : "+ first +"  "+last);
+		</script>
+	</head>
+
+	<body>
+	</body>
+</html>

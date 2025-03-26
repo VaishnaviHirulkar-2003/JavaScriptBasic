@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<script>
+			var num=prompt("Enter the Number : ");
+			num=parseInt(num);
+			
+			var copy1=num;
+			var copy2=num;
+			
+			var count=0;
+
+			while(num!=0)
+			{
+				num=parseInt(num/10);
+				count++;
+			}	
+			var sum=0;
+			while(copy1!=0)
+			{
+				var rem=copy1%10;
+				var fact=1;
+				for(var j=1;j<=count;j++)
+				{
+					fact=rem*fact
+				}
+				copy1=parseInt(copy1/10);
+
+				sum=sum+fact;
+			}
+			console.log(sum);
+		if(copy2==sum)
+		{
+			console.log("yes");
+		}
+		else
+		{
+			console.log("No");
+		}
+		</script>
+	</head>
+
+	<body>
+	</body>
+</html>

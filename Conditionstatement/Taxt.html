@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<script>
+			var case1=prompt("Enter the Number of test Cases : ");
+			case1=parseInt(case1);
+			
+			while(case1>0)
+			{
+				var tax1=prompt("Enter the first taxi amount : ");
+				tax1=parseInt(tax1);
+				alert("Proceed For next taxi ");
+				var tax2=prompt("Enter the Second Taxi Amount : ");
+				tax2=parseInt(tax2);
+			
+				if(tax1>tax2)
+				{
+					console.log("second");	
+				}
+				else if(tax2>tax1)
+				{
+					console.log("First");
+				}
+				else
+				{
+					console.log("Any");
+				}
+				case1--;
+			}
+		</script>
+	</head>
+	
+	<body>
+			
+	</body>
+</html>

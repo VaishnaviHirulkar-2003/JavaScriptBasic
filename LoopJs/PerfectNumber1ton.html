@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<script>
+			var range=prompt("Enter the Range");
+			range=parseInt(range);
+
+			for(var i=1;i<=range;i++)
+			{
+				var sum=0;
+				for(var j=1;j<i;j++)
+				{
+					if(i%j==0)
+					{
+						sum=sum+j;
+					}
+				}
+				if(sum==i)
+				{
+					console.log(i);
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<script>
+			alert("Please Enter the Initial Balance : ");
+			var bal=prompt("Enter the bal : ");
+			bal=parseInt(bal);
+
+			var amt=prompt("Enter the amt : ");
+			amt=parseInt(amt);
+
+			if(amt%5==0)
+			{
+			if(amt<bal)
+			{
+				bal=bal-amt-0.50;
+				console.log("afte transaction : "+bal);
+			}
+			else
+			{
+				console.log("Insufficeint balance");
+			}
+			}
+			else
+			{
+				console.log("Widrwal amt not multiple of 5");
+			}
+		</script>
+	</head>
+
+	<body>
+
+	</body>
+</html>

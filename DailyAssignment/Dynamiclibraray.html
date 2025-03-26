@@ -1,0 +1,122 @@
+<html>
+	<head>
+		<script>
+			let c;
+			let i=0;
+			function getImg()
+			{	
+				var count=prompt("Enter the Number Of Imges you want to enter : ");
+				count=parseInt(count);
+				c=count;
+				var getid=document.getElementById("count");
+				getid.value=count;
+				
+			}
+			function addImg()
+			{
+				if(c>i)
+				{
+				let sub=document.createElement("div");
+				sub.id="sub";
+				sub.classList.add(i);
+				let imgtag=document.createElement("img");
+				var path=prompt("Enter the name or path to display and store imges : ");
+				imgtag.setAttribute("src",path);
+				imgtag.setAttribute("height","200px");
+				imgtag.setAttribute("width","200px");
+				var getid=document.getElementById("img");
+				let b=document.createElement("button");
+				b.innerHTML="Remove";
+				b.setAttribute("width","20px");
+				b.setAttribute("height","40px");
+				b.id=i;
+				b.setAttribute("onclick","Delete(id)");
+				sub.appendChild(imgtag);
+				sub.appendChild(b);
+				sub.style.marginBottom="20px";
+				b.style.backgroundColor="yellow";
+				b.style.border="2px solid red";
+				getid.appendChild(sub);
+				i++;
+				}
+				else
+				{
+					alert("Img Not Store Because of less Memory");
+				}
+			}
+
+			function Delete(id)
+			{
+				var element = document.getElementById(id).parentNode;
+				element.parentNode.removeChild(element);
+				c++;
+			}
+			</script>
+			
+		<style>
+			*
+			{
+				margin:0px;
+				padding:0px;
+				box-sizzing:border-box;
+			}
+			body
+			{
+				background-color:C6BBBA;	
+			}
+			input
+			{
+				width:30%;
+				margin-left:30%;
+				height:40px;
+				margin-top:2%;
+				text-align:center;
+				border:2px solid red;
+				font-weight:600;
+				font-size:14px;
+			}	
+			h4
+			{
+				margin-left:38%;
+				margin-top:3%;
+			}
+			#add
+			{
+				width:10%;
+				margin-left:40%;
+			}
+			#img
+			{
+				width:90%;
+				min-height:100px;
+				margin:auto;
+				display:flex;
+				flex-direction:row;
+				flex-wrap:wrap;
+				gap:5%;	
+				margin-top:4%;
+			}
+			#sub
+			{
+				display:flex;
+				flex-direction:column;
+			}
+			#sub button
+			{
+				margin-top:2%;
+				width:100px;
+				height:30px;
+				margin-left:15%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h4>Enter the Number of Imges</h4>
+		<input type="text" value='' id='count' onclick="getImg()"></input>
+		<input type="button" value='Add Imges' id='add' onclick="addImg()"></input>
+		<div id="img">
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,97 @@
+<html>
+	<head>
+		<script>
+			function show()
+			{
+				var getquan =(document.getElementById("quant"));
+				getquan.value=prompt("Enter the Qunatity :");
+				var getrate=(document.getElementById("rate"));
+				getrate.value=prompt("Enter the Rate : ");
+				var getbill=document.getElementById("gstw");
+				getbill.value=getquan.value*getrate.value;	
+				alert("Bill Without Gst : " + getbill.value);
+			
+			}
+			function bill()
+			{
+				var getgst=document.getElementById("gst");
+				getgst.value=parseInt(prompt("Enter the gst You want : "));
+
+				var getbill=document.getElementById("gstw");
+				var gettotal=document.getElementById("bill");
+				gettotal.value=getbill.value*getgst.value+" with sgt";
+				alert("TOtal Bill With Gst : " +gettotal.value);
+			}
+		</script>
+
+
+		<style>
+			*
+			{
+				margin:0px;
+				padding:0px;
+				box-sizzing:border-bpx;
+			}
+			h1
+			{
+				color:red;
+				text-align:center;
+				margin-top:3%;
+			}
+			.container
+			{
+					width:30%;
+					margin:auto;
+					min-height:300px;
+					margin-top:3%;
+					background: #06beb6;  /* fallback for old browsers */
+				background: -webkit-linear-gradient(to right, #48b1bf, #06beb6);  /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(to right, #48b1bf, #06beb6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, 				Safari 7+ */
+				border-radius:20px;
+				display:flex;
+				flex-direction:row;
+				flex-wrap:wrap;	
+				gap:5%;
+			}
+			.container input
+			{	
+				width:40%;
+				height:70px;	
+				margin-top:3%;
+				margin-left:5%;
+				text-align:center;
+				border:2px solid red;
+				border-radius:10px;
+				font-size:14px;
+				font-weight:700;
+				margin-bottom:8%;
+				margin-top:6%;
+			}	
+			#bill
+			{
+				margin:auto;
+				margin-top:30px;
+				margin-bottom:20px;
+			}
+		</style>
+	</head>
+
+	</body>
+		<h1>Bii Calucator</h1>
+		<div class="container">
+				<input type="text" value='Enter the quantity' id="quant" onclick='show()'></input>
+				<input type="text" value='Enter the rate' id="rate"></input>
+				<br>
+				<br>
+				<input type="text" value='' id="gstw" onclick='show()'></input>
+				<input type="text" value='Show Gst' id="gst" onclick='bill()'></input>
+
+				<br>
+
+				<br>
+				<input type="text" value='Bill With Gst' id="bill"></input>
+
+		</div>	
+	</body>
+
+</html>

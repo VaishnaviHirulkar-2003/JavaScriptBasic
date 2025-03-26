@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<script>
+			var num=prompt("Enter the Number : ");
+			num =parseInt(num);
+			for(var i=1;i<num;i++)
+			{
+				if(num%i==0)
+				{	
+					var flag='true';
+					for(var j=2;j<i;j++)
+					{
+						if(i%j==0)
+						{
+							flag='false';
+							break;
+						}
+					}
+					if(flag=='true')
+					{
+						console.log("Prime Factor Of Number : " +num +"is ---->"+i);
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<script>
+			var testcase=prompt("Enter the TestCases : ");
+			testcase=parseInt(testcase);
+
+			while(testcase>0)
+			{
+				var first=prompt("Enter the First Volume : ");
+				first=parseInt(first);
+				var second=prompt("Enter the Second Volume : ");
+				second=parseInt(second);
+
+				if(first>second)
+				{
+					console.log("Volume Decreases By " + (first-second));
+				}
+				else if(second>first)
+				{
+					console.log("Volume Increases by " + (second-first));
+				}	
+				else
+				{
+					console.log("No Change");
+				}
+				testcase--;
+			}
+		</script>
+	</head>
+
+	<body>
+
+	</body>
+</html>

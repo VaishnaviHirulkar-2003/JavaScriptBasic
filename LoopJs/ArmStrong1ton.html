@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<script>
+			var range=prompt("Enter the Range : ");
+			range=parseInt(range);
+
+			for(var i=1;i<=range;i++)
+			{
+				var copy=i;
+				var count=0;
+				var num=i;
+				while(num!=0)
+				{
+				num=parseInt(num/10);
+				count++;
+				}
+				var sum=0;
+				while(copy!=0)
+				{
+				var rem=copy%10;
+				var fact=1;
+				for(var j=1;j<=count;j++)
+				{
+					fact=fact*rem;
+				}
+				copy=parseInt(copy/10);
+				sum=sum+fact;
+				}
+			if(sum==i)
+			{
+				console.log(i);
+			}
+
+			}
+		</script>
+	</head>
+
+	<body>
+			
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<script>
+			var num=prompt("Enter the Number : ");
+			num=parseInt(num);
+
+			var sum=0;
+			var copy=num;
+			while(num!=0)
+			{
+				var rem=num%10;
+				var fact=1;
+				for(var j=1;j<=rem;j++)
+				{
+					fact=fact*j;
+				}
+				sum=sum+fact;
+				num=parseInt(num/10);
+			}
+			
+			if(sum==copy)
+			{
+				console.log("Yes");
+			}
+			else
+			{
+				console.log("No");
+			}
+		</script>
+	</head>
+	
+	<body>
+
+	</body>
+</html>
